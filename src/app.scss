@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+$primary-soft-blue: hsl(215, 51%, 70%);
+$primary-cyan: hsl(178, 100%, 50%);
+$neutral-main-bg: hsl(217, 54%, 11%);
+$neutral-card-bg: hsl(216, 50%, 16%);
+$neutral-line: hsl(215, 32%, 27%);
+$neutral-white: hsl(0, 0%, 100%);
+$font-size-paragraph: 18px;
+$font-family: "Outfit", sans-serif;
+
+.app {
+  background-color: $neutral-main-bg;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $neutral-white;
+
+  .card {
+    background-color: $neutral-card-bg;
+    height: 66.5%;
+    width: 72.2%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 7.5% 7.5%;
+    .image_container {
+      display: contents;
+      .card_image {
+        width: 100%;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 376px) {
+  .app {
+    .card {
+      width: 350px;
+      height: 596px;
+    }
+  }
+}
