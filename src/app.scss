@@ -32,25 +32,34 @@ $font-family: "Outfit", sans-serif;
     padding: 7.5%;
 
     .image_container {
-      display: contents;
+      display: flex;
+      position: relative;
       .card_image {
         width: 100%;
         border-radius: 8px;
-        cursor: pointer;
         z-index: 1;
       }
 
-      // nah fam
       .image_mask {
-        z-index: 0;
-        background-color: transparentize($color: $primary-cyan, $amount: 0.1);
+        z-index: 2;
         border-radius: 8px;
         width: 100%;
-        height: 200px;
-        top: 0;
-        display: none;
+        height: 100%;
+        position: absolute;
+        display: flex;
         justify-content: center;
         align-items: center;
+        svg {
+          display: none;
+        }
+      }
+
+      .image_mask:hover {
+        cursor: pointer;
+        background-color: transparentize($color: $primary-cyan, $amount: 0.5);
+        svg {
+          display: unset;
+        }
       }
     }
     .card_title {
@@ -131,7 +140,7 @@ $font-family: "Outfit", sans-serif;
 @media screen and (min-width: 376px) {
   .app {
     .card {
-      width: 350px;
+      width: 302px;
       padding: 24px;
     }
   }
